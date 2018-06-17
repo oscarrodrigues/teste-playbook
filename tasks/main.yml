@@ -1,0 +1,14 @@
+---
+- name: 'Instala pacotes de dependencia'
+  yum:
+    name: "{{ item }}"
+    state: latest
+  become: yes
+  with_items:
+    - httpd
+    - php
+    - php-gd
+    - php-mysql
+    - php-pear
+    - php-xml
+    - php-xmlrpc
